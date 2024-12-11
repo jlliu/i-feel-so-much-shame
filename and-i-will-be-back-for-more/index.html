@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>title</title>
+
+<style>
+body{
+	height:100vh;
+	width:100vw;
+	background-position:center center;
+	background-size:cover;
+	margin:0px;
+	display:flex;
+}
+
+body.horizontal{
+	flex-direction:row;
+}
+
+body.horizontal iframe{
+	height: calc(100vh - 4px);
+	width: calc(50% - 4px);
+	position:relative;
+	min-height:0px;
+}
+
+body.vertical{
+	flex-direction:column;
+}
+
+body.vertical iframe{
+	height:  calc(100%);
+	width: calc(100vw - 4px);
+	position:relative;
+	min-height:0px;
+
+}
+
+div {
+	position:absolute;
+	width:100vw;
+	height:100vh;
+	background-position:center center;
+	background-size:cover;
+	visibility:hidden;
+}
+
+iframe{
+	background-color:white;
+	z-index:2;
+}
+
+button {
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	height:180px;
+	width:400px;
+	padding:0px;
+	z-index:1;
+	opacity:0;
+	cursor:pointer;
+}
+</style>
+</head>
+<body>
+<button>button</button>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>title</title>
+
+<style>
+body{
+	height:100vh;
+	width:100vw;
+	background-position:center center;
+	background-size:cover;
+	margin:0px;
+	display:flex;
+	/* padding:20px; */
+}
+
+
+div {
+	position:absolute;
+	width:100vw;
+	height:100vh;
+	background-position:center center;
+	background-size:cover;
+	visibility:hidden;
+	pointer-events:none;
+}
+
+iframe{
+	background-color:white;
+	z-index:2;
+	flex-grow: 1;
+  margin: calc(80vh * .01);
+}
+
+button, a {
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translateX(-50%);
+	height:180px;
+	width:400px;
+	padding:0px;
+	z-index:1;
+	opacity:0;
+	cursor:pointer;
+}
+button#inputButton{
+	cursor:text !important;
+}
+</style>
+</head>
+<body>
+<button id="inputButton">Input Button</button>
+<a id="nextButton" href="../and-i-go-to-meet-it/">Next</a>
+</body>
+<script src="script.js"></script>
+</html>
