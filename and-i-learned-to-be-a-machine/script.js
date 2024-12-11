@@ -189,6 +189,7 @@ function countdown() {
 
 selectButton.addEventListener("mousedown", function () {
   dropdownOpen = true;
+  nextButton.style.pointerEvents = "none";
   selectButton.style.pointerEvents = "none";
   countdown();
   optionButtons.forEach(function (optionButton) {
@@ -222,6 +223,7 @@ optionButtons.forEach(function (optionButton) {
       dropdownOpen = false;
       thisState = "focusInput";
       selectButton.style.pointerEvents = "all";
+      nextButton.style.pointerEvents = "all";
       closeDropdownAfterMouseup = false;
       if (optionButton.id == "busyButton") {
         thisFrame = "busy";
@@ -269,7 +271,7 @@ document.addEventListener("mousedown", function (event) {
 nextButton.addEventListener("mouseenter", function () {
   if (thisState == "default") {
     thisState = "hoverButton";
-  } else if ((thisState = "focusInput")) {
+  } else if (thisState == "focusInput") {
     thisState = "focusInputHoverButton";
   }
 });
