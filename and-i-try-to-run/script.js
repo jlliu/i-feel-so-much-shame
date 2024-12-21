@@ -82,7 +82,7 @@ let states = ["default", "hover", "press"];
 for (var i = 1; i < 12; i++) {
   states.forEach(function (state) {
     let newDiv = document.createElement("div");
-    newDiv.style.backgroundImage = `url(img/${i}/${state}/1.png)`;
+    newDiv.style.backgroundImage = `url(img/${i}/${state}/1.jpeg)`;
     newDiv.dataset.frame = i;
     newDiv.dataset.num = 1;
     newDiv.dataset.state = state;
