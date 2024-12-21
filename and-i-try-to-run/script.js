@@ -147,5 +147,5 @@ document.addEventListener("mouseup", function (e) {
 });
 
 nextButton.addEventListener("click", function () {
-  window.location.href = "/and-i-learned-to-be-a-machine";
+  window.location.href = "../and-i-learned-to-be-a-machine";
 });
