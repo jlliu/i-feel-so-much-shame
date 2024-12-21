@@ -11,7 +11,7 @@ if (isHorizontal == "true" || isHorizontal == null) {
 
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
-let buttonDimensions = { width: 420, height: 264 };
+let buttonDimensions = { width: 448, height: 200 };
 let originalDimensions = { width: 1280, height: 720 };
 let ratio = originalDimensions.width / originalDimensions.height;
 let button = document.querySelector("button");

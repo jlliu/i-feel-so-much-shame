@@ -12,8 +12,8 @@ let aboutButton = document.querySelector("#aboutButton");
 
 let buttons = [
   { id: "button1", width: 818, height: 66, x: 232, y: 327 },
-  { id: "button2", width: 681, height: 132, x: 300, y: 294 },
-  { id: "button3", width: 581, height: 132, x: 300, y: 294 },
+  { id: "button2", width: 617, height: 132, x: 331, y: 294 },
+  { id: "button3", width: 681, height: 132, x: 300, y: 294 },
 ];
 
 let buttonEls = [

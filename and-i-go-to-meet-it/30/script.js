@@ -1,5 +1,5 @@
 const thisFrame = 30;
-let buttonDimensions = { width: 446, height: 100 };
+let buttonDimensions = { width: 736, height: 100 };
 
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;

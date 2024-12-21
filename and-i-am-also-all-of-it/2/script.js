@@ -10,7 +10,7 @@ let ratio = originalDimensions.width / originalDimensions.height;
 let nextButton = document.querySelector("#nextButton");
 let aboutButton = document.querySelector("#aboutButton");
 
-let buttons = [{ id: "button", width: 536, height: 172, x: 372, y: 274 }];
+let buttons = [{ id: "button", width: 272, height: 308, x: 506, y: 206 }];
 
 let button = document.querySelector("button");
 

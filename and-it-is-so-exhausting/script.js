@@ -6,7 +6,7 @@ let windowHeight = window.innerHeight;
 let originalDimensions = { width: 1280, height: 720 };
 let ratio = originalDimensions.width / originalDimensions.height;
 let inputButton = document.querySelector("#inputButton");
-let inputButtonDimensions = { width: 840, height: 120, x: 223, y: 252 };
+let inputButtonDimensions = { width: 840, height: 113, x: 223, y: 252 };
 
 let nextButton = document.querySelector("#nextButton");
 let nextButtonDimensions = { width: 112, height: 90, x: 583, y: 507 };
@@ -221,7 +221,9 @@ let scene1Animation = window.setInterval(function () {
 inputButton.addEventListener("mouseenter", function () {
   inputHovering = true;
   if (animationStarted && !currentlyAnimating) {
-    scene27state = "hoverInput";
+    if (scene27state != "focus") {
+      scene27state = "hoverInput";
+    }
   }
 });
 
@@ -282,7 +284,6 @@ inputButton.addEventListener("mousedown", function () {
     }, 120);
   }
   if (animationStarted && !currentlyAnimating) {
-    console.log("put into focus");
     scene27state = "focus";
   }
 });

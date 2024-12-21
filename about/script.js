@@ -92,7 +92,7 @@ let states = ["default", "hoverBack", "hoverHomepage", "hoverMe"];
 for (var i = 1; i < versions + 1; i++) {
   states.forEach(function (state) {
     let newDiv = document.createElement("div");
-    newDiv.style.backgroundImage = `url(${state}/${i}.png)`;
+    newDiv.style.backgroundImage = `url(${state}/${i}.jpeg)`;
     newDiv.dataset.num = i;
     newDiv.dataset.state = state;
     bgDivs.push(newDiv);

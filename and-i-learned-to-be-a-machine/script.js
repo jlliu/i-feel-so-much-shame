@@ -241,6 +241,18 @@ optionButtons.forEach(function (optionButton) {
       });
     }
   });
+  optionButton.addEventListener("mouseleave", function () {
+    if (dropdownOpen) {
+      thisState = "hoverNone";
+      // if (optionButton.id == "busyButton") {
+      //   thisState = "hoverBusy";
+      // } else if (optionButton.id == "independentButton") {
+      //   thisState = "hoverIndependent";
+      // } else if (optionButton.id == "perfectButton") {
+      //   thisState = "hoverPerfect";
+      // }
+    }
+  });
 });
 
 document.addEventListener("mouseup", function (event) {

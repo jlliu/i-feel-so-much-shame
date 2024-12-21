@@ -12,8 +12,8 @@ let button2 = document.querySelector("#button2");
 button2.style.pointerEvents = "none";
 
 let buttons = [
-  { id: "button1", width: 873, height: 172, x: 204, y: 274 },
-  { id: "button2", width: 835, height: 258, x: 222, y: 231 },
+  { id: "button1", width: 764, height: 152, x: 258, y: 284 },
+  { id: "button2", width: 644, height: 228, x: 317, y: 246 },
 ];
 
 let buttonDisplacement = 0;
