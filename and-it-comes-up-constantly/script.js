@@ -89,7 +89,7 @@ let currentVersion = 1;
 
 /////// LOAD IMAGES
 
-let states = ["default", "hover", "press", "hoverAbout", "pressHoverAbout"];
+let states = ["default", "hover", "press"];
 
 // Iterate through frames to create divs
 for (var i = 1; i < 4; i++) {
