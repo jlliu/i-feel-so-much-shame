@@ -80,14 +80,14 @@ let hovering = "false";
 
 for (var i = 1; i < versions + 1; i++) {
   let newDivDefault = document.createElement("div");
-  newDivDefault.style.backgroundImage = `url(img/${thisFrame}/default/${i}.png)`;
+  newDivDefault.style.backgroundImage = `url(img/${thisFrame}/default/${i}.jpeg)`;
   newDivDefault.dataset.num = i;
   newDivDefault.dataset.hover = false;
   bgDivs.push(newDivDefault);
   document.body.appendChild(newDivDefault);
 
   let newDivHover = document.createElement("div");
-  newDivHover.style.backgroundImage = `url(img/${thisFrame}/hover/${i}.png)`;
+  newDivHover.style.backgroundImage = `url(img/${thisFrame}/hover/${i}.jpeg)`;
   newDivHover.dataset.num = i;
   newDivHover.dataset.hover = true;
   bgDivs.push(newDivHover);

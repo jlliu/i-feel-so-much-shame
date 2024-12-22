@@ -90,7 +90,7 @@ for (var i = 1; i < 3; i++) {
   for (var j = 1; j < versions + 1; j++) {
     states.forEach(function (state) {
       let newDiv = document.createElement("div");
-      newDiv.style.backgroundImage = `url(img/${i}/${state}/${j}.png)`;
+      newDiv.style.backgroundImage = `url(img/${i}/${state}/${j}.jpeg)`;
       newDiv.dataset.frame = i;
       newDiv.dataset.num = j;
       newDiv.dataset.state = state;

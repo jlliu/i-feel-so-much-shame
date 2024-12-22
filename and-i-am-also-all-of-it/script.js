@@ -88,7 +88,7 @@ let states = ["default", "hover", "press"];
 states.forEach(function (state) {
   for (var j = 1; j < versions + 1; j++) {
     let newDiv = document.createElement("div");
-    newDiv.style.backgroundImage = `url(img/${thisFrame}/${state}/${j}.png)`;
+    newDiv.style.backgroundImage = `url(img/${thisFrame}/${state}/${j}.jpeg)`;
     newDiv.dataset.num = j;
     newDiv.dataset.state = state;
     bgDivs.push(newDiv);

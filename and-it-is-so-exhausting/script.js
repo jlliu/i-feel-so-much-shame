@@ -97,7 +97,7 @@ let animationDivs = [];
 // First frame
 for (var i = 1; i < versions + 1; i++) {
   let newDivDefault = document.createElement("div");
-  newDivDefault.style.backgroundImage = `url(img/${thisFrame}/default/${i}.png)`;
+  newDivDefault.style.backgroundImage = `url(img/${thisFrame}/default/${i}.jpeg)`;
   newDivDefault.dataset.sceneId = 1;
   newDivDefault.dataset.num = i;
   newDivDefault.dataset.hover = false;
@@ -105,7 +105,7 @@ for (var i = 1; i < versions + 1; i++) {
   document.body.appendChild(newDivDefault);
 
   let newDivHover = document.createElement("div");
-  newDivHover.style.backgroundImage = `url(img/${thisFrame}/hover/${i}.png)`;
+  newDivHover.style.backgroundImage = `url(img/${thisFrame}/hover/${i}.jpeg)`;
   newDivHover.dataset.sceneId = 1;
   newDivHover.dataset.num = i;
   newDivHover.dataset.hover = true;
@@ -115,7 +115,7 @@ for (var i = 1; i < versions + 1; i++) {
 // Frames 2 to 26
 for (var i = 2; i < 27; i++) {
   let newDiv = document.createElement("div");
-  newDiv.style.backgroundImage = `url(img/${i}/default/1.png)`;
+  newDiv.style.backgroundImage = `url(img/${i}/default/1.jpeg)`;
   newDiv.dataset.sceneId = i;
   animationDivs.push(newDiv);
   document.body.appendChild(newDiv);
@@ -123,7 +123,7 @@ for (var i = 2; i < 27; i++) {
 // Frame 27
 for (var i = 1; i < versions + 1; i++) {
   let newDiv1 = document.createElement("div");
-  newDiv1.style.backgroundImage = `url(img/27/focusCursor/${i}.png)`;
+  newDiv1.style.backgroundImage = `url(img/27/focusCursor/${i}.jpeg)`;
   newDiv1.dataset.sceneId = 27;
   newDiv1.dataset.num = i;
   newDiv1.dataset.state = "focus";
@@ -133,7 +133,7 @@ for (var i = 1; i < versions + 1; i++) {
   document.body.appendChild(newDiv1);
 
   let newDiv2 = document.createElement("div");
-  newDiv2.style.backgroundImage = `url(img/27/focus/${i}.png)`;
+  newDiv2.style.backgroundImage = `url(img/27/focus/${i}.jpeg)`;
   newDiv2.dataset.sceneId = 27;
   newDiv2.dataset.num = i;
   newDiv2.dataset.state = "focus";
@@ -143,7 +143,7 @@ for (var i = 1; i < versions + 1; i++) {
   document.body.appendChild(newDiv2);
 
   let newDiv3 = document.createElement("div");
-  newDiv3.style.backgroundImage = `url(img/27/default/${i}.png)`;
+  newDiv3.style.backgroundImage = `url(img/27/default/${i}.jpeg)`;
   newDiv3.dataset.sceneId = 27;
   newDiv3.dataset.num = i;
   newDiv3.dataset.state = "default";
@@ -151,7 +151,7 @@ for (var i = 1; i < versions + 1; i++) {
   document.body.appendChild(newDiv3);
 
   let newDiv4 = document.createElement("div");
-  newDiv4.style.backgroundImage = `url(img/27/hoverInput/${i}.png)`;
+  newDiv4.style.backgroundImage = `url(img/27/hoverInput/${i}.jpeg)`;
   newDiv4.dataset.sceneId = 27;
   newDiv4.dataset.num = i;
   newDiv4.dataset.state = "hoverInput";
@@ -159,7 +159,7 @@ for (var i = 1; i < versions + 1; i++) {
   document.body.appendChild(newDiv4);
 
   let newDiv5 = document.createElement("div");
-  newDiv5.style.backgroundImage = `url(img/27/focusCursorHoverButton/${i}.png)`;
+  newDiv5.style.backgroundImage = `url(img/27/focusCursorHoverButton/${i}.jpeg)`;
   newDiv5.dataset.sceneId = 27;
   newDiv5.dataset.num = i;
   newDiv5.dataset.state = "focusHoverButton";
@@ -169,7 +169,7 @@ for (var i = 1; i < versions + 1; i++) {
   document.body.appendChild(newDiv5);
 
   let newDiv6 = document.createElement("div");
-  newDiv6.style.backgroundImage = `url(img/27/focusHoverButton/${i}.png)`;
+  newDiv6.style.backgroundImage = `url(img/27/focusHoverButton/${i}.jpeg)`;
   newDiv6.dataset.sceneId = 27;
   newDiv6.dataset.num = i;
   newDiv6.dataset.state = "focusHoverButton";
@@ -179,7 +179,7 @@ for (var i = 1; i < versions + 1; i++) {
   document.body.appendChild(newDiv6);
 
   let newDiv7 = document.createElement("div");
-  newDiv7.style.backgroundImage = `url(img/27/hoverButton/${i}.png)`;
+  newDiv7.style.backgroundImage = `url(img/27/hoverButton/${i}.jpeg)`;
   newDiv7.dataset.sceneId = 27;
   newDiv7.dataset.num = i;
   newDiv7.dataset.state = "hoverButton";
@@ -187,7 +187,7 @@ for (var i = 1; i < versions + 1; i++) {
   document.body.appendChild(newDiv7);
 
   let newDiv8 = document.createElement("div");
-  newDiv8.style.backgroundImage = `url(img/27/pressButton/${i}.png)`;
+  newDiv8.style.backgroundImage = `url(img/27/pressButton/${i}.jpeg)`;
   newDiv8.dataset.sceneId = 27;
   newDiv8.dataset.num = i;
   newDiv8.dataset.state = "pressButton";

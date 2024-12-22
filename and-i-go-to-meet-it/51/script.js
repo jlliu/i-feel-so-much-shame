@@ -51,7 +51,7 @@ let pressing = "false";
 
 for (var i = 1; i < versions + 1; i++) {
   let newDivDefault = document.createElement("div");
-  newDivDefault.style.backgroundImage = `url(../img/${thisFrame}/default/${i}.png)`;
+  newDivDefault.style.backgroundImage = `url(../img/${thisFrame}/default/${i}.jpeg)`;
   newDivDefault.dataset.num = i;
   newDivDefault.dataset.hover = false;
   newDivDefault.dataset.press = false;
@@ -59,7 +59,7 @@ for (var i = 1; i < versions + 1; i++) {
   document.body.appendChild(newDivDefault);
 
   let newDivHover = document.createElement("div");
-  newDivHover.style.backgroundImage = `url(../img/${thisFrame}/hover/${i}.png)`;
+  newDivHover.style.backgroundImage = `url(../img/${thisFrame}/hover/${i}.jpeg)`;
   newDivHover.dataset.num = i;
   newDivHover.dataset.hover = true;
   newDivHover.dataset.press = false;
@@ -67,7 +67,7 @@ for (var i = 1; i < versions + 1; i++) {
   document.body.appendChild(newDivHover);
 
   let newDivPress = document.createElement("div");
-  newDivPress.style.backgroundImage = `url(../img/${thisFrame}/press/${i}.png)`;
+  newDivPress.style.backgroundImage = `url(../img/${thisFrame}/press/${i}.jpeg)`;
   newDivPress.dataset.num = i;
   newDivPress.dataset.hover = false;
   newDivPress.dataset.press = true;
