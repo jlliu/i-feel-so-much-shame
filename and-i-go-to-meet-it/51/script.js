@@ -37,7 +37,7 @@ window.onresize = resizeWindow;
 resizeWindow();
 
 button.addEventListener("click", function () {
-  top.window.location.href = "/and-i-am-also-all-of-it";
+  top.window.location.href = "../and-i-am-also-all-of-it";
 });
 
 // Needs to not only animate but hover...
