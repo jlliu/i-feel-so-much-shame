@@ -38,7 +38,7 @@ resizeWindow();
 
 button.addEventListener("click", function () {
   let iframe = document.createElement("iframe");
-  iframe.src = `..//${thisFrame + 1}/`;
+  iframe.src = `../${thisFrame + 1}/`;
   document.body.appendChild(iframe);
   versions = 1;
 });

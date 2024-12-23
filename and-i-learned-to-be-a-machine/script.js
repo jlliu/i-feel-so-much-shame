@@ -244,13 +244,6 @@ optionButtons.forEach(function (optionButton) {
   optionButton.addEventListener("mouseleave", function () {
     if (dropdownOpen) {
       thisState = "hoverNone";
-      // if (optionButton.id == "busyButton") {
-      //   thisState = "hoverBusy";
-      // } else if (optionButton.id == "independentButton") {
-      //   thisState = "hoverIndependent";
-      // } else if (optionButton.id == "perfectButton") {
-      //   thisState = "hoverPerfect";
-      // }
     }
   });
 });
@@ -262,6 +255,7 @@ document.addEventListener("mouseup", function (event) {
       closeDropdownAfterMouseup = false;
       thisState = "focusInput";
       selectButton.style.pointerEvents = "all";
+      nextButton.style.pointerEvents = "all";
       optionButtons.forEach(function (optionButton) {
         optionButton.style.pointerEvents = "none";
       });
@@ -276,7 +270,9 @@ document.addEventListener("mouseup", function (event) {
 
 document.addEventListener("mousedown", function (event) {
   if (event.target == document.body) {
-    thisState = "default";
+    if (thisState == "focusInput") {
+      thisState = "default";
+    }
   }
 });
 
