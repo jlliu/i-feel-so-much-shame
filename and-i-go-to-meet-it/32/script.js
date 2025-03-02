@@ -1,7 +1,11 @@
-console.log("script for 32");
-
 const thisFrame = 32;
 let buttonDimensions = { width: 248, height: 100 };
+
+const userAgentString = navigator.userAgent;
+const isChrome = navigator.userAgent.indexOf("Chrome") > -1;
+const isMobile =
+  navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/) !== null;
+let workaroundFlow = !isChrome || isMobile;
 
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
@@ -39,11 +43,15 @@ window.onresize = resizeWindow;
 resizeWindow();
 
 button.addEventListener("click", function () {
-  let iframe = document.createElement("iframe");
-  iframe.src = `/and-i-go-to-meet-it/${thisFrame + 1}/`;
-  document.body.appendChild(iframe);
-  versions = 1;
-  clearInterval(animationInterval);
+  if (!workaroundFlow) {
+    let iframe = document.createElement("iframe");
+    iframe.src = `/and-i-go-to-meet-it/${thisFrame + 1}/`;
+    document.body.appendChild(iframe);
+    versions = 1;
+    clearInterval(animationInterval);
+  } else {
+    window.location.href = `/and-i-go-to-meet-it/${thisFrame + 1}/`;
+  }
 });
 
 // Needs to not only animate but hover...

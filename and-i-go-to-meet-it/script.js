@@ -2,6 +2,13 @@ const thisFrame = 1;
 const maxFrames = 5;
 let buttonDimensions = { width: 443, height: 100 };
 
+const userAgentString = navigator.userAgent;
+const isChrome = navigator.userAgent.indexOf("Chrome") > -1;
+const isMobile =
+  navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/) !== null;
+
+let workaroundFlow = !isChrome || isMobile;
+
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
 
@@ -39,10 +46,14 @@ resizeWindow();
 
 let iframe = document.createElement("iframe");
 button.addEventListener("click", function () {
-  iframe.src = `${thisFrame + 1}/`;
-  document.body.appendChild(iframe);
-  versions = 1;
-  clearInterval(animationInterval);
+  if (!workaroundFlow) {
+    iframe.src = `${thisFrame + 1}/`;
+    document.body.appendChild(iframe);
+    versions = 1;
+    clearInterval(animationInterval);
+  } else {
+    window.location.href = `${thisFrame + 1}/`;
+  }
 });
 
 // Needs to not only animate but hover...
