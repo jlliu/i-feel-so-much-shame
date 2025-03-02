@@ -4,7 +4,10 @@ console.log("userAgentData:");
 console.log(navigator.userAgentData);
 console.log("userAgent:");
 console.log(navigator.userAgent);
-const isMobile = navigator.userAgentData.mobile;
+// const isMobile = navigator.userAgentData.mobile;
+const isMobile =
+  navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/) !== null;
+console.log(isMobile);
 
 let windowWidth = isMobile ? screen.width : window.innerWidth;
 let windowHeight = isMobile ? screen.height : window.innerHeight;
