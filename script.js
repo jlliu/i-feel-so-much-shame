@@ -1,8 +1,11 @@
 let thisFrame = "1";
 let thisState = "default";
-
+console.log("userAgentData:");
+console.log(navigator.userAgentData);
+console.log("userAgent:");
+console.log(navigator.userAgent);
 const isMobile = navigator.userAgentData.mobile;
-console.log(isMobile);
+
 let windowWidth = isMobile ? screen.width : window.innerWidth;
 let windowHeight = isMobile ? screen.height : window.innerHeight;
 
