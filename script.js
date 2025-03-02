@@ -1,18 +1,19 @@
 let thisFrame = "1";
 let thisState = "default";
-console.log("userAgentData:");
-console.log(navigator.userAgentData);
-console.log("userAgent:");
-console.log(navigator.userAgent);
+// console.log("userAgentData:");
+// console.log(navigator.userAgentData);
+// console.log("userAgent:");
+// console.log(navigator.userAgent);
 // const isMobile = navigator.userAgentData.mobile;
-const isMobile =
+let isMobile =
   navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/) !== null;
-console.log(isMobile);
+// console.log(isMobile);
 if (isMobile) {
   window.alert(
     "Please view this web experience on desktop, and in Chrome / Arc browsers for the full experience"
   );
 }
+isMobile = false;
 
 let windowWidth = isMobile ? screen.width : window.innerWidth;
 let windowHeight = isMobile ? screen.height : window.innerHeight;
