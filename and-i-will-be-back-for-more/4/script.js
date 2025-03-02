@@ -64,6 +64,10 @@ button.addEventListener("click", function () {
   }
   document.body.appendChild(iframe1);
   document.body.appendChild(iframe2);
+
+  window.top.postMessage({
+    msg: "iframe open",
+  });
 });
 
 // Needs to not only animate but hover...
@@ -94,7 +98,7 @@ for (var i = 1; i < versions + 1; i++) {
 
 //Cycle through divs while noting whether or not is hovering
 let visibleNum = 1;
-window.setInterval(function () {
+let animationInterval = window.setInterval(function () {
   visibleNum++;
 
   //Cycle through frames

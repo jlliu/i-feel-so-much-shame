@@ -1,8 +1,9 @@
 let thisFrame = "1";
 let thisState = "default";
 
-let windowWidth = window.innerWidth;
-let windowHeight = window.innerHeight;
+const isMobile = navigator.userAgentData.mobile;
+let windowWidth = isMobile ? screen.width : window.innerWidth;
+let windowHeight = isMobile ? screen.height : window.innerHeight;
 
 let originalDimensions = { width: 1280, height: 720 };
 let ratio = originalDimensions.width / originalDimensions.height;
@@ -18,8 +19,8 @@ let buttons = [
 let buttonDisplacement = 0;
 
 function resizeWindow() {
-  windowWidth = window.innerWidth;
-  windowHeight = window.innerHeight;
+  windowWidth = isMobile ? screen.width : window.innerWidth;
+  windowHeight = isMobile ? screen.height : window.innerHeight;
   // let currentRatio = windowHeight / 720;
 
   let widthToHeight = windowWidth / windowHeight;

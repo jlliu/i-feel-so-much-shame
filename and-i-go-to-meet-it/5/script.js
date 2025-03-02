@@ -38,9 +38,10 @@ resizeWindow();
 
 button.addEventListener("click", function () {
   let iframe = document.createElement("iframe");
-  iframe.src = `../${thisFrame + 1}/`;
+  iframe.src = `/and-i-go-to-meet-it/${thisFrame + 1}/`;
   document.body.appendChild(iframe);
   versions = 1;
+  clearInterval(animationInterval);
 });
 
 // Needs to not only animate but hover...
@@ -69,7 +70,7 @@ for (var i = 1; i < versions + 1; i++) {
 
 //Cycle through divs while noting whether or not is hovering
 let visibleNum = 1;
-window.setInterval(function () {
+let animationInterval = window.setInterval(function () {
   visibleNum++;
 
   //Cycle through frames

@@ -42,7 +42,7 @@ button.addEventListener("click", function () {
   iframe.src = `${thisFrame + 1}/`;
   document.body.appendChild(iframe);
   versions = 1;
-  window.top.postMessage("iframe open");
+  clearInterval(animationInterval);
 });
 
 // Needs to not only animate but hover...
@@ -71,7 +71,7 @@ for (var i = 1; i < versions + 1; i++) {
 
 //Cycle through divs while noting whether or not is hovering
 let visibleNum = 1;
-window.setInterval(function () {
+let animationInterval = window.setInterval(function () {
   visibleNum++;
 
   //Cycle through frames
@@ -102,15 +102,46 @@ button.addEventListener("mouseleave", function () {
 
 // let spacing = 100;
 
+// let maxIframes = 5;
+
+// let numIframesOpened = 0;
+
+// let iFramesList = [];
+
+// let iframesHTML = [];
+
+//Idea: recursively find iframes....
+// function findIframes(iframeInner) {
+//   iFramesList.push(iframeInner);
+//   if (iframeInner.querySelector("iframe") == null) {
+//     return;
+//   } else {
+//     console.log("attempting to find iframe");
+//     let innerDoc = iframeInner.querySelector("iframe").contentWindow.document;
+//     findIframes(innerDoc);
+//   }
+// }
+
+// function adjustIframes() {
+//   if (numIframesOpened > maxIframes) {
+// iFramesList = [];
+// let iframeInner = iframe.contentWindow.document;
+// findIframes(iframeInner);
+// console.log(iFramesList);
+//Take the last 5 iframe HTMLs and uhhh.. load them? i dont think this is a good idea....
+// }
+// }
+
 // window.addEventListener(
 //   "message",
 //   (event) => {
 //     console.log(event.data);
-//     if (event.data == "iframe open") {
-//       console.log("detected message");
-//       iframe.contentWindow.postMessage("update spacing");
-//       console.log("posting message to iframe");
-//       numOfOpenIframes++;
+//     if (event.data.msg == "iframe open") {
+//       numIframesOpened++;
+//       console.log("detecting data");
+//       console.log(event.data.innerHTML);
+//       iframesHTML.push(event.data.innerHTML);
+//       adjustIframes();
 //     }
 //   },
 //   false

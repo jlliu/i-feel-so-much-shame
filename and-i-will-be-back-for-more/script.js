@@ -96,7 +96,7 @@ for (var i = 1; i < versions + 1; i++) {
 
 //Cycle through divs while noting whether or not is hovering
 let visibleNum = 1;
-window.setInterval(function () {
+let animationInterval = window.setInterval(function () {
   visibleNum++;
 
   //Cycle through frames
@@ -119,3 +119,19 @@ button.addEventListener("mouseenter", function () {
 button.addEventListener("mouseleave", function () {
   hovering = "false";
 });
+
+let numIframesOpened = 0;
+window.addEventListener(
+  "message",
+  (event) => {
+    if (event.data.msg == "iframe open") {
+      numIframesOpened++;
+      if (numIframesOpened == 15) {
+        window.alert(
+          "✿ ifeelsomuchsha.me is a browser-based interactive narrative made from scanned Risograph prints\n✿ by Jackie Liu (jackieis.online)\n✿ created during Welcome to My Hompage Residency in December 2024"
+        );
+      }
+    }
+  },
+  false
+);
