@@ -1,16 +1,12 @@
 let thisFrame = "1";
 let thisState = "default";
-// console.log("userAgentData:");
-// console.log(navigator.userAgentData);
-// console.log("userAgent:");
-// console.log(navigator.userAgent);
-// const isMobile = navigator.userAgentData.mobile;
+
 let isMobile =
   navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/) !== null;
 // console.log(isMobile);
 if (isMobile) {
   window.alert(
-    "Please view this web experience on desktop, and in Chrome / Arc browsers for the full experience"
+    "🔄 Rotate to view in landscape mode 🔄\n\nThis website experiments with affordances of the browser. Due to variations across browsers, please view on desktop using Chrome or Arc browsers for the complete experience ♡"
   );
 }
 isMobile = false;
