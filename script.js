@@ -8,6 +8,11 @@ console.log(navigator.userAgent);
 const isMobile =
   navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/) !== null;
 console.log(isMobile);
+if (isMobile) {
+  window.alert(
+    "Please view this web experience on desktop, and in Chrome / Arc browsers for the full experience"
+  );
+}
 
 let windowWidth = isMobile ? screen.width : window.innerWidth;
 let windowHeight = isMobile ? screen.height : window.innerHeight;
