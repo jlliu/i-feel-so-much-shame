@@ -1,18 +1,23 @@
 let thisFrame = "1";
 let thisState = "default";
 
-let isMobile =
+const userAgentString = navigator.userAgent;
+const isChrome = navigator.userAgent.indexOf("Chrome") > -1;
+const isMobile =
   navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/) !== null;
-// console.log(isMobile);
+
 if (isMobile) {
   window.alert(
-    "🔄 Rotate to view in landscape mode 🔄\n\nThis website experiments with affordances of the browser. Due to variations across browsers, please view on desktop using Chrome or Arc browsers for the complete experience ♡"
+    "🔄 Rotate to view in landscape mode 🔄\n\nThis website experiments with constraints of the browser. Please view on desktop using Chrome or Arc Browser for the complete experience ♡"
+  );
+} else if (!isChrome) {
+  window.alert(
+    "This website experiments with constraints of the browser. Please view using Chrome or Arc Browser for the complete experience ♡"
   );
 }
-isMobile = false;
 
-let windowWidth = isMobile ? screen.width : window.innerWidth;
-let windowHeight = isMobile ? screen.height : window.innerHeight;
+let windowWidth = window.innerWidth;
+let windowHeight = window.innerHeight;
 
 let originalDimensions = { width: 1280, height: 720 };
 let ratio = originalDimensions.width / originalDimensions.height;
@@ -28,8 +33,8 @@ let buttons = [
 let buttonDisplacement = 0;
 
 function resizeWindow() {
-  windowWidth = isMobile ? screen.width : window.innerWidth;
-  windowHeight = isMobile ? screen.height : window.innerHeight;
+  windowWidth = window.innerWidth;
+  windowHeight = window.innerHeight;
   // let currentRatio = windowHeight / 720;
 
   let widthToHeight = windowWidth / windowHeight;
