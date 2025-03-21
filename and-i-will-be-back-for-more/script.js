@@ -128,7 +128,7 @@ window.addEventListener(
       numIframesOpened++;
       if (numIframesOpened == 15) {
         window.alert(
-          "✿ ifeelsomuchsha.me is a browser-based interactive narrative made from scanned Risograph prints\n✿ by Jackie Liu (jackieis.online)\n✿ created during Welcome to My Hompage Residency in December 2024\n✿ part of https://thehtml.review/04/""
+          "✿ ifeelsomuchsha.me is a browser-based interactive narrative made from scanned Risograph prints\n✿ by Jackie Liu (jackieis.online)\n✿ created during Welcome to My Hompage Residency in December 2024\n✿ part of https://thehtml.review/04/"
         );
       }
     }
